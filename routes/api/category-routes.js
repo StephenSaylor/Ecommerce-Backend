@@ -12,7 +12,17 @@ router.get('/', (req, res) => {
       attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
     }
   })
-  .then  
+  .then(dbData => {
+    if (!dbData) {
+      res.status(404).json({message: 'No categories for you'})
+      return
+    }
+    res.json(dbData)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  }) 
 });
 
 router.get('/:id', (req, res) => {
@@ -27,6 +37,17 @@ router.get('/:id', (req, res) => {
       attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
     } 
   })
+  .then(dbData => {
+    if (!dbData) {
+      res.status(404).json({message: 'No categories for you'})
+      return
+    }
+    res.json(dbData)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  }) 
 });
 
 router.post('/', (req, res) => {
