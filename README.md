@@ -11,11 +11,10 @@ Installation
 First npm init, and nmp i to install all packages, then node server to set up and run the server
 
 Usage
-To quickly create a team profile when prompted with questions about the team and it's members.
 
 Link to video of operating application:
 
-
+https://drive.google.com/file/d/11k7qK64i3WGo43f2_l1Ms_V_UAJQ4SJN/view
 
 License
 MIT License: https://opensource.org/licenses/MIT
